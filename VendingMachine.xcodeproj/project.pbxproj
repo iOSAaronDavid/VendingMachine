@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE3296D11C87AA840083D854 /* Tester.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3296D01C87AA840083D854 /* Tester.m */; };
 		CE6404331C8654E700C66094 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6404321C8654E700C66094 /* main.m */; };
 		CE6404361C8654E700C66094 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6404351C8654E700C66094 /* AppDelegate.m */; };
 		CE6404391C8654E700C66094 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6404381C8654E700C66094 /* ViewController.m */; };
 		CE64043C1C8654E700C66094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE64043A1C8654E700C66094 /* Main.storyboard */; };
 		CE64043E1C8654E700C66094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE64043D1C8654E700C66094 /* Assets.xcassets */; };
 		CE6404411C8654E700C66094 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE64043F1C8654E700C66094 /* LaunchScreen.storyboard */; };
-		CE64044C1C8654E700C66094 /* VendingMachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE64044B1C8654E700C66094 /* VendingMachineTests.m */; };
-		CE6404571C8654E700C66094 /* VendingMachineUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6404561C8654E700C66094 /* VendingMachineUITests.m */; };
+		CE847A751C869E9C00C42469 /* Purchase.m in Sources */ = {isa = PBXBuildFile; fileRef = CE847A741C869E9C00C42469 /* Purchase.m */; };
+		CE847A761C869E9C00C42469 /* Purchase.m in Sources */ = {isa = PBXBuildFile; fileRef = CE847A741C869E9C00C42469 /* Purchase.m */; };
+		CE847A771C869E9C00C42469 /* Purchase.m in Sources */ = {isa = PBXBuildFile; fileRef = CE847A741C869E9C00C42469 /* Purchase.m */; };
+		CECBFAB21C8668140009E9DB /* VendingMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = CECBFAB11C8668140009E9DB /* VendingMachine.m */; };
+		CECBFAB31C8668140009E9DB /* VendingMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = CECBFAB11C8668140009E9DB /* VendingMachine.m */; };
+		CECBFAB41C8668140009E9DB /* VendingMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = CECBFAB11C8668140009E9DB /* VendingMachine.m */; };
+		CECBFABC1C866B480009E9DB /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = CECBFABB1C866B480009E9DB /* Product.m */; };
+		CECBFABD1C866B480009E9DB /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = CECBFABB1C866B480009E9DB /* Product.m */; };
+		CECBFABE1C866B480009E9DB /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = CECBFABB1C866B480009E9DB /* Product.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE3296CF1C87AA840083D854 /* Tester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tester.h; sourceTree = "<group>"; };
+		CE3296D01C87AA840083D854 /* Tester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tester.m; sourceTree = "<group>"; };
 		CE64042E1C8654E700C66094 /* VendingMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VendingMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6404321C8654E700C66094 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CE6404341C8654E700C66094 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -46,11 +56,13 @@
 		CE6404401C8654E700C66094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE6404421C8654E700C66094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE6404471C8654E700C66094 /* VendingMachineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VendingMachineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE64044B1C8654E700C66094 /* VendingMachineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VendingMachineTests.m; sourceTree = "<group>"; };
-		CE64044D1C8654E700C66094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE6404521C8654E700C66094 /* VendingMachineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VendingMachineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE6404561C8654E700C66094 /* VendingMachineUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VendingMachineUITests.m; sourceTree = "<group>"; };
-		CE6404581C8654E800C66094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE847A731C869E9C00C42469 /* Purchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Purchase.h; sourceTree = "<group>"; };
+		CE847A741C869E9C00C42469 /* Purchase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Purchase.m; sourceTree = "<group>"; };
+		CECBFAB01C8668140009E9DB /* VendingMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VendingMachine.h; sourceTree = "<group>"; };
+		CECBFAB11C8668140009E9DB /* VendingMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VendingMachine.m; sourceTree = "<group>"; };
+		CECBFABA1C866B480009E9DB /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		CECBFABB1C866B480009E9DB /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				CE6404301C8654E700C66094 /* VendingMachine */,
-				CE64044A1C8654E700C66094 /* VendingMachineTests */,
-				CE6404551C8654E700C66094 /* VendingMachineUITests */,
 				CE64042F1C8654E700C66094 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -110,6 +120,14 @@
 				CE64043F1C8654E700C66094 /* LaunchScreen.storyboard */,
 				CE6404421C8654E700C66094 /* Info.plist */,
 				CE6404311C8654E700C66094 /* Supporting Files */,
+				CECBFAB01C8668140009E9DB /* VendingMachine.h */,
+				CECBFAB11C8668140009E9DB /* VendingMachine.m */,
+				CECBFABA1C866B480009E9DB /* Product.h */,
+				CECBFABB1C866B480009E9DB /* Product.m */,
+				CE847A731C869E9C00C42469 /* Purchase.h */,
+				CE847A741C869E9C00C42469 /* Purchase.m */,
+				CE3296CF1C87AA840083D854 /* Tester.h */,
+				CE3296D01C87AA840083D854 /* Tester.m */,
 			);
 			path = VendingMachine;
 			sourceTree = "<group>";
@@ -120,24 +138,6 @@
 				CE6404321C8654E700C66094 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		CE64044A1C8654E700C66094 /* VendingMachineTests */ = {
-			isa = PBXGroup;
-			children = (
-				CE64044B1C8654E700C66094 /* VendingMachineTests.m */,
-				CE64044D1C8654E700C66094 /* Info.plist */,
-			);
-			path = VendingMachineTests;
-			sourceTree = "<group>";
-		};
-		CE6404551C8654E700C66094 /* VendingMachineUITests */ = {
-			isa = PBXGroup;
-			children = (
-				CE6404561C8654E700C66094 /* VendingMachineUITests.m */,
-				CE6404581C8654E800C66094 /* Info.plist */,
-			);
-			path = VendingMachineUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3296D11C87AA840083D854 /* Tester.m in Sources */,
 				CE6404391C8654E700C66094 /* ViewController.m in Sources */,
 				CE6404361C8654E700C66094 /* AppDelegate.m in Sources */,
 				CE6404331C8654E700C66094 /* main.m in Sources */,
+				CECBFABC1C866B480009E9DB /* Product.m in Sources */,
+				CE847A751C869E9C00C42469 /* Purchase.m in Sources */,
+				CECBFAB21C8668140009E9DB /* VendingMachine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +284,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE64044C1C8654E700C66094 /* VendingMachineTests.m in Sources */,
+				CE847A761C869E9C00C42469 /* Purchase.m in Sources */,
+				CECBFABD1C866B480009E9DB /* Product.m in Sources */,
+				CECBFAB31C8668140009E9DB /* VendingMachine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +294,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE6404571C8654E700C66094 /* VendingMachineUITests.m in Sources */,
+				CE847A771C869E9C00C42469 /* Purchase.m in Sources */,
+				CECBFABE1C866B480009E9DB /* Product.m in Sources */,
+				CECBFAB41C8668140009E9DB /* VendingMachine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +504,7 @@
 				CE64045D1C8654E800C66094 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE64045E1C8654E800C66094 /* Build configuration list for PBXNativeTarget "VendingMachineTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +513,7 @@
 				CE6404601C8654E800C66094 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE6404611C8654E800C66094 /* Build configuration list for PBXNativeTarget "VendingMachineUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +522,7 @@
 				CE6404631C8654E800C66094 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

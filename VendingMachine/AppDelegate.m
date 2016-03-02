@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  VendingMachine
 //
-//  Created by User on 3/1/16.
+//  Created by Aaron Erickson on 3/1/16.
 //  Copyright © 2016 tgm. All rights reserved.
 //
 
