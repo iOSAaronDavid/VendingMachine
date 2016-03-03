@@ -10,9 +10,6 @@
 #import "ViewController.h"
 
 @interface Tester : NSObject
-{
-    ViewController *vendingMachineViewController;
-}
 
 - (void)runTestCases;
 @end

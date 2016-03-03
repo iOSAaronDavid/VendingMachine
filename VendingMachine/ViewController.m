@@ -75,6 +75,8 @@
         self.vendingMachine.nickels = 0;
     }
     
+    self.vendingMachine.change = 0;
+    
     NSLog(@"%@", coinReturnDisplayMessage);
     return coinReturnDisplayMessage;
 }

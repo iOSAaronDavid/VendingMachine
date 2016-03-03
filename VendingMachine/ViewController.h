@@ -15,5 +15,8 @@
 
 @property (nonatomic, strong) UILabel *label;
 
+-(NSString *)coinReturnedPressed;
+-(NSString *)didSelectProduct:(NSString *)productName;
+
 @end
 

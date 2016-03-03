@@ -14,6 +14,7 @@
 {
     [self insertCoinsIntoVendingMachine];
     [self purchaseProductFromVendingMachine];
+    [self testCoinReturn];
 }
 
 - (void)insertCoinsIntoVendingMachine
@@ -105,8 +106,50 @@
     }
 }
 
+- (void)testCoinReturn
+{
+    ViewController *vendingMachineController = [[ViewController alloc] init];
+    vendingMachineController.vendingMachine = [[VendingMachine alloc] init];
+    
+    vendingMachineController.vendingMachine.quarters = 2;
+    vendingMachineController.vendingMachine.quartersInInventory = 2;
+    vendingMachineController.vendingMachine.nickels = 5;
+    vendingMachineController.vendingMachine.nickelsInInventory = 5;
+    vendingMachineController.vendingMachine.dimes = 1;
+    vendingMachineController.vendingMachine.dimesInInventory = 1;
+    
+    vendingMachineController.vendingMachine.change = 2 * 0.25 + 5 * 0.05 + 0.10;
+    
+    NSString *machineActionLog = [vendingMachineController coinReturnedPressed];
+    
+    if (![machineActionLog isEqualToString:@"Return  2 quarters  1 dimes  5 nickels "])
+        NSLog(@"%@", [NSString stringWithFormat:@"Error: Machine dispensed the incorrect amount of coins."]);
+                     
+    if (vendingMachineController.vendingMachine.quartersInInventory != 0)
+        NSLog(@"%@", @"Quarter was not dispensed from the inventory of the machine.");
+    
+    if (vendingMachineController.vendingMachine.dimesInInventory != 0)
+        NSLog(@"%@", @"Dimes was not dispensed from the inventory of the machine.");
+    
+    if (vendingMachineController.vendingMachine.nickelsInInventory != 0)
+        NSLog(@"%@", @"Nickels was not dispensed from the inventory of the machine.");
+    
+    if (vendingMachineController.vendingMachine.change != 0)
+        NSLog(@"%@", @"Change value is retained by the machine.");
+}
 
-
+-(void)selectingTheProductAndReturningThankYou
+{
+    ViewController *cMV = [[ViewController alloc] init];
+    cMV.vendingMachine.productInventory = [Product refillProducts];
+    Product *vProduct = [cMV.vendingMachine.productInventory objectForKey:cMV.vendingMachine.productInventory.allKeys[0]];
+    cMV.vendingMachine.change = vProduct.price;
+    vProduct.quantity = 1;
+    NSString *response = [cMV didSelectProduct:vProduct.name];
+    
+    if (![response isEqualToString:@"THANK YOU"])
+        NSLog(@"Incorrect message in vending machine display.");
+}
 
 
 @end
