@@ -21,12 +21,14 @@
     [allProducts setObject:product forKey:product.name];
     product = nil;
     
+    product = [[Product alloc] init];
     product.name = @"Chips";
     product.quantity = 7;
     product.price = 0.5; // $0.50
     [allProducts setObject:product forKey:product.name];
     product = nil;
     
+    product = [[Product alloc] init];
     product.name = @"Candy";
     product.quantity = 9;
     product.price = 0.65; // $0.65
