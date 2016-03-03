@@ -165,4 +165,18 @@
     return purchase;
 }
 
++(VendingMachine *)refillVendingMachineForTesting:(VendingMachine *)vendingMachine
+{
+    NSDictionary *allProducts = [Product refillProducts];
+    vendingMachine.productInventory = allProducts;
+    vendingMachine.quartersInInventory = 100;
+    vendingMachine.dimesInInventory = 100;
+    vendingMachine.nickelsInInventory = 100;
+    vendingMachine.nickels = 100;
+    vendingMachine.dimes = 100;
+    vendingMachine.quarters = 100;
+    vendingMachine.change = 100 * 0.05 + 100 * 0.10 + 100 * 0.25;
+    return vendingMachine;
+}
+
 @end

@@ -31,4 +31,6 @@
 -(BOOL)coinInsertedAndAccepted:(int)coin;
 -(Purchase *)purchaseProductSuccessfully:(NSString *)productName;
 
++(VendingMachine *)refillVendingMachineForTesting:(VendingMachine *)vendingMachine;
+
 @end

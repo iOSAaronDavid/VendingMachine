@@ -13,6 +13,7 @@
 - (void)runTestCases
 {
     [self insertCoinsIntoVendingMachine];
+    [self purchaseProductFromVendingMachine];
 }
 
 - (void)insertCoinsIntoVendingMachine
@@ -74,6 +75,37 @@
     if (vendingMachine.quarters > 0 || vendingMachine.quartersInInventory > 0 || vendingMachine.dimes > 0 || vendingMachine.dimesInInventory > 0 || vendingMachine.nickelsInInventory > 0 || vendingMachine.nickels > 0)
         NSLog(@"Invalid coin accepted in the machine");
 }
+
+- (void)purchaseProductFromVendingMachine
+{
+    VendingMachine *vendingMachine = [[VendingMachine alloc] init];
+    
+    Purchase *purchase = [vendingMachine purchaseProductSuccessfully:@"Product That Does Not Exist"];
+    
+    if (purchase.success)
+        NSLog(@"Invalid product purchased");
+    if (purchase.reasonForFailure != SYSTEM_ERROR)
+        NSLog(@"Invalid reason for purchase failure");
+    
+    purchase = nil;
+    
+    vendingMachine = [VendingMachine refillVendingMachineForTesting:vendingMachine];
+    
+    for (int i = 0; i < vendingMachine.productInventory.allKeys.count; i++)
+    {
+        purchase = [[Purchase alloc] init];
+        
+        Product *product = [vendingMachine.productInventory objectForKey:vendingMachine.productInventory.allKeys[i]];
+        purchase = [vendingMachine purchaseProductSuccessfully:product.name];
+        
+        if (!purchase.success)
+            NSLog(@"%@", [NSString stringWithFormat:@"Not able to purchase %@.", product.name]);
+        
+        purchase = nil;
+    }
+}
+
+
 
 
 
