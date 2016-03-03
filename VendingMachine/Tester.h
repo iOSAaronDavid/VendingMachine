@@ -13,4 +13,6 @@
 {
     ViewController *vendingMachineViewController;
 }
+
+- (void)runTestCases;
 @end

@@ -10,7 +10,7 @@
 
 @implementation Tester
 
-- (void)testAutomation
+- (void)runTestCases
 {
     
 }

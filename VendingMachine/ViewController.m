@@ -32,19 +32,25 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)didReceiveCoin:(int)coin
+- (NSString *)didReceiveCoin:(int)coin
 {
     if ([self.vendingMachine coinInsertedAndAccepted:coin])
     {
         NSNumberFormatter *currencyFormatter = [[NSNumberFormatter alloc] init];
         [currencyFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
         self.label.text = [currencyFormatter stringFromNumber:[NSNumber numberWithDouble:self.vendingMachine.change]];
+        return @"Coin accepted";
     }
     else
+    {
         [self returnCoin];
+        return @"Coin returned";
+    }
+    
+    return @"Error";
 }
 
-- (void)coinReturnedPressed
+- (NSString *)coinReturnedPressed
 {
     NSMutableString *coinReturnDisplayMessage = [[NSMutableString alloc] initWithString:@"Return "];
     
@@ -68,31 +74,39 @@
         self.vendingMachine.nickelsInInventory -= self.vendingMachine.nickels;
         self.vendingMachine.nickels = 0;
     }
+    
+    NSLog(@"%@", coinReturnDisplayMessage);
+    return coinReturnDisplayMessage;
 }
 
-- (void)didSelectProduct:(NSString *)productName
+- (NSString *)didSelectProduct:(NSString *)productName
 {
     Purchase *purchase = [self.vendingMachine purchaseProductSuccessfully:productName];
     if (purchase.success)
     {
         self.label.text = @"THANK YOU";
+        return @"Product dispensed";
     }
     else
     {
         if (purchase.reasonForFailure == SOLD_OUT)
         {
             self.label.text = @"SOLD OUT";
+            return @"Product sold out";
         }
         else if (purchase.reasonForFailure == NOT_ENOUGH_CHANGE)
         {
             NSNumberFormatter *currencyFormatter = [[NSNumberFormatter alloc] init];
             self.label.text = [NSString stringWithFormat:@"PRICE: %@", [currencyFormatter stringFromNumber:[NSNumber numberWithDouble:self.vendingMachine.change]]];
+            return @"Not enough change";
         }
         else if (purchase.reasonForFailure == EXACT_CHANGE_ONLY)
         {
             self.label.text = @"EXACT CHANGE ONLY";
+            return @"Exact change only";
         }
     }
+    return @"Error";
 }
 
 - (void)returnCoin
