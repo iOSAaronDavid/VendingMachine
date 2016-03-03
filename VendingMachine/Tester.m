@@ -15,6 +15,7 @@
     [self insertCoinsIntoVendingMachine];
     [self purchaseProductFromVendingMachine];
     [self testCoinReturn];
+    [self selectingTheProductAndReturningThankYou];
 }
 
 - (void)insertCoinsIntoVendingMachine
@@ -141,13 +142,14 @@
 -(void)selectingTheProductAndReturningThankYou
 {
     ViewController *cMV = [[ViewController alloc] init];
+    cMV.vendingMachine = [[VendingMachine alloc] init];
     cMV.vendingMachine.productInventory = [Product refillProducts];
     Product *vProduct = [cMV.vendingMachine.productInventory objectForKey:cMV.vendingMachine.productInventory.allKeys[0]];
     cMV.vendingMachine.change = vProduct.price;
     vProduct.quantity = 1;
     NSString *response = [cMV didSelectProduct:vProduct.name];
     
-    if (![response isEqualToString:@"THANK YOU"])
+    if (![response isEqualToString:@"Product dispensed"])
         NSLog(@"Incorrect message in vending machine display.");
 }
 
